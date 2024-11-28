@@ -12,25 +12,44 @@
 
 public class ex5 {
 	public static void main(String[] args) {
-		
 		Dau d1 = new Dau();
-		d1.tiradaDau();
-		d1.mostraDau();
+		Dau d2 = new  Dau(3);
 		
-	
-		System.exit(0);
+		int cont = 0;
+		int tirades = 0;
+		
+		while (cont <= 3) {
+			d1.tiradaDau();
+			d1.mostraDau();
+			
+			if (d1.getDau() == 6) {
+				cont++;
+				tirades++;
+			} else
+				tirades++;
+		}
+		
+		System.out.println("El numero total de tiradas ha sido " + tirades);
+		
+		
 	}
 }
 
 class Dau {
-	private int numDau = (int) (1+6*Math.random());
+	private int numDau;
 	
-	public Dau() {this.numDau = numDau; }
+	public Dau() {this.numDau = (int) (1+6*Math.random()); }
 	public Dau(int value) {this.numDau = value; }
 	public Dau(Dau d) {this.numDau = d.numDau; }
 	
 	// Setters and getters
-	public void setDau(int num) { this.numDau = num; }
+	public void setDau(int num) {
+		if ((num <= 6) && (num >=1))
+			this.numDau = num;
+		else
+			this.numDau = (int) (1+6*Math.random());
+	}
+	
 	public int getDau() { return numDau; }
 	
 	// Metodo tirada
@@ -38,9 +57,37 @@ class Dau {
 	
 	// Mostra tirada
 	public void mostraDau() {
-		for (int i = 1; i <= numDau; i++)
-			System.out.println(numDau);
+		switch (numDau){
+			case 1:
+				System.out.println(" "+" "+" ");
+				System.out.println(" "+"*"+" ");
+				System.out.println(" "+" "+" ");
+				System.out.println("");
+			case 2:
+				System.out.println(" "+" "+" ");
+				System.out.println("*"+" "+"*");
+				System.out.println(" "+" "+" ");
+				System.out.println("");
+			case 3:
+				System.out.println("*"+" "+" ");
+				System.out.println(" "+"*"+" ");
+				System.out.println(" "+" "+"*");
+				System.out.println("");
+			case 4:
+				System.out.println("*"+" "+"*");
+				System.out.println(" "+" "+" ");
+				System.out.println("*"+" "+"*");
+				System.out.println("");
+			case 5:
+				System.out.println("*"+" "+"*");
+				System.out.println(" "+"*"+" ");
+				System.out.println("*"+" "+"*");
+				System.out.println("");
+			case 6:
+				System.out.println("*"+" "+"*");
+				System.out.println("*"+" "+"*");
+				System.out.println("*"+" "+"*");
+				System.out.println("");
+		}
 	}
-	
-	
 }
