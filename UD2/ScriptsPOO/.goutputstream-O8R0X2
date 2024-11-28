@@ -1,0 +1,17 @@
+/*
+5. Defineix la classe Dau amb:
+
+	- un atribut "valor" (que variarà entre 1 i 6)
+	- constructor sense paràmetre
+	- constructor general amb valor indicat com a paràmetre
+	- constructor de còpia
+	- setter i getter (setValor i getValor)
+	- un mètode "tirada" que canvia el valor del dau a l'atzar
+	- altre mètode "mostra" que dibuixe el dau en pantalla amb asteriscos
+*/
+class dau {
+	private int valor = (int) ((Math.random()*6)+1);
+	
+	public dau () {
+	}
+}

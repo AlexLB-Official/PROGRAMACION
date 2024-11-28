@@ -1,0 +1,17 @@
+Fes un programa en Java que, fent ús de la classe java.Math i de la seua documentació, obtinga i mostre els resultats de les següents operacions:
+
+	a) Potència de 4.5 elevat a 3.2
+	
+	b) logaritme, en base 10, de 10000
+	
+	c) 5.87 arredonit a l'enter superior i a l'inferior
+	
+	d) el màxim i el mínim dels dos valors anteriors
+	
+	e) l'arrel quadrat de 103
+	
+	f) la suma de PI i E
+	
+	g) 10 majúscules aleatòries i altres 10 minúscules
+	
+	h) Donat el codi compartit "ColorAleatori.java" completa les línies 16 a 18, fent ús de Math.random(), per a generar 3 valors RGB (RED - GREEN - BLUE) entre 0 i 255 que formen un objecte Color que s'ha de mostrar a pantalla.
